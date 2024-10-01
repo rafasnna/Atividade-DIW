@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explorar Séries - Cine+Plus</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            background-color: #000000; /* Cor de fundo da página */
+        }
+
+        .filter-section {
+            background-color: #000000; /* Cor de fundo para a seção de filtros */
+            padding: 15px;
+            border-radius: 5px;
+        }
+
+        .filter-section h4 {
+            color: #fff;
+        }
+
+        .filter-section .form-check-label {
+            color: #fff;
+        }
+
+        #results .card {
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        #results .card:hover {
+            transform: scale(1.05);
+        }
+
+        .details-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .card:hover .details-overlay {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <!-- Cabeçalho com Logo e Menu -->
+    <nav class="navbar navbar-expand-lg navbar-dark shadow-sm" style="background-color: #000000;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/logo.png" alt="Logo" width="250" height="100" class="d-inline-block align-text-top rounded-circle"> 
+            </a>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Principal</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="explorer.html">Explorar Séries</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Seção de Pesquisa e Filtros -->
+    <section class="container my-5">
+        <h2 class="mb-4 text-light text-center">Explore Séries</h2>
+        <div class="row">
+            <div class="col-md-3">
+                <!-- Seção de Filtros -->
+                <div class="filter-section mb-4">
+                    <h4>Filtros</h4>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="genre-action" value="Ação" checked>
+                        <label class="form-check-label" for="genre-action">Ação</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="genre-drama" value="Drama" checked>
+                        <label class="form-check-label" for="genre-drama">Drama</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="genre-comedy" value="Comédia" checked>
+                        <label class="form-check-label" for="genre-comedy">Comédia</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="genre-thriller" value="Suspense" checked>
+                        <label class="form-check-label" for="genre-thriller">Suspense</label>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-9">
+                <form id="search-form" class="mb-4">
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="search-input" placeholder="Pesquise por uma série...">
+                        <button class="btn btn-danger" type="submit">Buscar</button>
+                    </div>
+                </form>
+
+                <div id="results" class="row row-cols-1 row-cols-md-3 g-4">
+                    <!-- Resultados Estáticos das Séries com Tags -->
+                    <div class="col" data-genres="Ação, Drama, Comédia, Suspense">
+                        <div class="card h-100 shadow border-0 rounded bg-dark text-light">
+                            <img src="images/serie1.jpg" class="card-img-top" alt="Série 1">
+                            <div class="details-overlay">
+                                <h5 class="card-title">Agatha Desde Sempre</h5>
+                                <p>- 2024</p>
+                            </div>
+                            <a href="serie.html?id=1" class="stretched-link"></a>
+                        </div>
+                    </div>
+                    <div class="col" data-genres="Ação, Aventura">
+                        <div class="card h-100 shadow border-0 rounded bg-dark text-light">
+                            <img src="images/serie2.jpg" class="card-img-top" alt="Série 2">
+                            <div class="details-overlay">
+                                <h5 class="card-title">Arcane 2</h5>
+                                <p>- 2024</p>
+                            </div>
+                            <a href="paginaserie2.html" class="stretched-link"></a>
+                        </div>
+                    </div>
+                    <div class="col" data-genres="Drama, Mistério">
+                        <div class="card h-100 shadow border-0 rounded bg-dark text-light">
+                            <img src="images/serie3.jpg" class="card-img-top" alt="Série 3">
+                            <div class="details-overlay">
+                                <h5 class="card-title">The Acolyte</h5>
+                                <p>- 2024</p>
+                            </div>
+                            <a href="paginaserie3.html" class="stretched-link"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-center py-4">
+        <p class="text-light">&copy; 2024 Cine+Plus. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>

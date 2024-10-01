@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cine+Plus</title>
+    <!-- FontAwesome para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-pap6xZT6hLdbLFyM2C6j0oZOLOsc6PzG/bKgVUGpLvG+N6L6VXjvZK/tdQKHE1Vkc3Oao8tv3VF+oSZAdH7A1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Seu CSS personalizado -->
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            background-color: #000000;
+            color: #ffffff;
+        }
+
+        .card {
+            transition: transform 0.3s ease;
+            border: none;
+            background-color: #000000;
+            position: relative; 
+            overflow: hidden; 
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            filter: brightness(70%);
+        }
+
+        .card-video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 300px; 
+            height: 200px; 
+            display: none; 
+        }
+
+        .card:hover .card-video {
+            display: block; /* Mostra o vídeo ao passar o mouse (javascript necessário)*/
+        }
+
+        .section-title {
+            text-align: left;
+            font-family: 'Ruttan Elegant', sans-serif;
+            position: relative;
+            color: #ffffff;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 2px;
+            background: #fff;
+            margin-top: 5px;
+        }
+
+        .row {
+            justify-content: center;
+        }
+
+        /* Estilo dos ícones de redes sociais */
+        .social-icon {
+            font-size: 24px;
+            color: #ffffff;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+            text-decoration: none;
+        }
+
+        .social-icon:hover {
+            color: #d9534f;
+        }
+
+        /* Adicionando a cor do texto dos parágrafos */
+        p {
+            color: #ffffff; /* Cor do texto em branco */
+        }
+        h5 {
+            color: #ffffff ;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- Navegação -->
+    <nav class="navbar navbar-expand-lg navbar-dark shadow-sm" style="background-color: #000000;">
+        <div class="container-fluid">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="images/logo.png" alt="Logo" width="250" height="100" class="d-inline-block align-text-top rounded-circle">
+            </a>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Principal</a>
+                    
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="explorer.html">Explorar</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Seção de Séries Populares -->
+    <section class="container my-5">
+        <h2 class="section-title mb-4">Séries Populares</h2>
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            <!-- Série 1 -->
+            <div class="col">
+                <div class="card">
+                    <img src="/images/recent2.jpg" class="card-img-top" alt="Pinguim">
+                    <div class="card-body">
+                        <h5 class="card-title">Pinguim</h5>
+                        <p class="card-text">Pinguim é a série derivada de Batman do Universo Expandido da DC que sobre um dos vilões mais clássicos dos quadrinhos, o mafioso de Gothan City Pinguim.</p>
+                    </div>
+                   
+                </div>
+            </div>
+            <!-- Série 2 -->
+            <div class="col">
+                <div class="card">
+                    <img src="/images/serie2.jpg" class="card-img-top" alt="Arcane 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Arcane 2</h5>
+                        <p class="card-text">Retomando vários conflitos que se desenrolam em torno das irmãs Jynx e Vi, mas a atiradora Caitlyn também enfrentará grandes desafios ao liderar uma das tropas nesta nova etapa da trama.</p>
+                    </div>
+                   
+                </div>
+            </div>
+            <!-- Série 3 -->
+            <div class="col">
+                <div class="card">
+                    <img src="/images/serie3.jpg" class="card-img-top" alt="Série 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Acolyte</h5>
+                        <p class="card-text">Um século antes da ascensão do Império Galáctico, a República e a Ordem Jedi prosperam em uma era de longa paz na galáxia. Em um pub do planeta Ueda, a Mestre Jedi Indara é atacada e assassinada por uma mulher misteriosa portando adagas.</p>
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Novas Séries -->
+    <section class="container mb-5">
+        <h2 class="section-title mb-4">Novas Séries</h2>
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            <!-- Série 1 -->
+            <div class="col">
+                <div class="card">
+                    <img src="/images/widescreen3.jpg" class="card-img-top" alt="Moon Knight">
+                    <div class="card-body">
+                        <h5 class="card-title">Moon Knight</h5>
+                        <p class="card-text">Um homem que sofre de transtorno dissociativo de identidade é atraído para uma guerra entre deuses egípcios.</p>
+                    </div>
+                  
+                </div>
+            </div>
+            <!-- Série 2 -->
+            <div class="col">
+                <div class="card">
+                    <img src="/images/widescreen1.jpg" class="card-img-top" alt="WandaVision">
+                    <div class="card-body">
+                        <h5 class="card-title">WandaVision</h5>
+                        <p class="card-text">Wanda Maximoff e Vision vivem uma vida suburbana, mas coisas estranhas começam a acontecer.</p>
+                    </div>
+                   
+                </div>
+            </div>
+            <!-- Série 3 -->
+            <div class="col">
+                <div class="card">
+                    <img src="/images/widescreen2.jpg" class="card-img-top" alt="Agatha All Along">
+                    <div class="card-body">
+                        <h5 class="card-title">Agatha All Along</h5>
+                        <p class="card-text">Agatha Harkness, uma bruxa poderosa, se revela como a verdadeira vilã por trás dos eventos de Westview.</p>
+                        <a href="serie.html?id=1" class="stretched-link"></a>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Seção Sobre -->
+    <section class="container mb-5">
+        <h2 class="section-title mb-4">Sobre</h2>
+        <div class="card text-center">
+            <div class="card-body">
+                <p>
+                    Me chamo Rafael, sou estudante da PUC Minas e curso Ciências da Computação. 
+                    Essa é uma atividade solicitada pelo professor, de desenvolver um site apenas com HTML e CSS. 
+                    Foi uma tarefa o quanto complicada, por eu não ser acostumado a sempre estar fazendo isso, mas o processo criativo foi bem legal!
+                    Acesse meu GitHub para ver mais!
+                </p>
+                <div>
+                    <p><a href="https://github.com/rafasnna" class="social-icon">GitHub</a></p>
+                    <div class="social-icons">
+                        </a>
+                        <a href="mailto:rafasnna@gmail.com" class="social-icon" aria-label="Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Minhas Séries -->
+    <section class="container mb-5">
+        <h2 class="section-title mb-4">Minhas Séries</h2>
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            <!-- Série 1 -->
+            <div class="col">
+                <div class="card">
+                    <img src="/images/recent1.jpg" class="card-img-top" alt="Agatha All Along">
+                    <div class="card-body">
+                        <h5 class="card-title">Agatha All Along</h5>
+                        <p class="card-text">Agatha Harkness, uma bruxa poderosa, se revela como a verdadeira vilã por trás dos eventos de Westview.</p>
+                    </div>
+                    
+                </div>
+            </div>
+            <!-- Série 2 -->
+            <div class="col">
+                <div class="card">
+                    <img src="/images/serie3.jpg" class="card-img-top" alt="Acolyte">
+                    <div class="card-body">
+                        <h5 class="card-title">Acolyte</h5>
+                        <p class="card-text">Um século antes da ascensão do Império Galáctico, a República e a Ordem Jedi prosperam em uma era de longa paz na galáxia. Em um pub do planeta Ueda, a Mestre Jedi Indara é atacada e assassinada por uma mulher misteriosa portando adagas.</p>
+                    </div>
+                    
+                </div>
+            </div>
+            <!-- Série 3 -->
+            <div class="col">
+                <div class="card">
+                    <img src="/images/recent2.jpg" class="card-img-top" alt="Pinguim">
+                    <div class="card-body">
+                        <h5 class="card-title">Pinguim</h5>
+                        <p class="card-text">Pinguim é a série derivada de Batman do Universo Expandido da DC que sobre um dos vilões mais clássicos dos quadrinhos, o mafioso de Gothan City Pinguim.</p>
+                        <a href="paginaserie4.html" class="stretched-link"></a>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+   
+
+    <footer class="bg-dark text-light text-center p-4">
+        <p>&copy; 2024 Cine+Plus. Todos os direitos reservados.</p>
+    </footer>
+</body>
+
+</html>

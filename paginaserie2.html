@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes da Série - Arcane</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            background-color: #121212;
+            color: #ffffff;
+        }
+
+        .navbar {
+            background-color: #000000;
+        }
+
+        .card {
+            background-color: #1c1c1c;
+        }
+
+        .nav-link {
+            color: #ffffff;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .nav-link:hover {
+            color: #ff3e3e;
+        }
+
+        .navbar-brand {
+            font-size: 24px;
+            font-weight: bold;
+            color: #ffffff;
+        }
+
+        .navbar-brand:hover {
+            color: #ff3e3e;
+        }
+
+        .video-container {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark shadow-sm">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">Cine+Plus</a>
+            <div class="collapse navbar-collapse justify-content-end">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Página Inicial</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="explorer.html">Explorar</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container my-4">
+        <h2 class="text-center" id="serie-title">Arcane</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <img src="images/serie2.jpg" id="serie-image" class="img-fluid" alt="Imagem da Série">
+            </div>
+            <div class="col-md-6">
+                <h4>Sinopse</h4>
+                <p id="serie-sinopse">"Arcane" explora a origem de duas icônicas campeãs do universo de League of Legends, enquanto se deparam com a complexidade do relacionamento entre os mundos de Piltover e Zaun. A série aborda temas de poder, amor e ambição em um cenário de conflitos e rivalidades.</p>
+                <p id="serie-ano">Ano de Lançamento: <span>2021</span></p>
+                <p id="serie-genero">Gênero: <span>Ação, Fantasia, Aventura</span></p>
+                <p id="serie-aprovacao">Aprovação: <span>9.3</span></p>
+
+                <!-- Adicionando o vídeo ao lado da sinopse -->
+                <div class="video-container">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/Ft_QrPGXWqc" 
+                            title="YouTube video player" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+        </div>
+
+        <h4 class="mt-4">Temporadas</h4>
+        <select id="season-select" class="form-select" aria-label="Selecione uma temporada">
+            <option value="">Selecione uma temporada</option>
+            <option value="1">Temporada 1 (9 episódios)</option>
+        </select>
+
+        <h4 class="mt-4">Elenco</h4>
+        <div id="elenco" class="row row-cols-1 row-cols-md-3 g-4">
+            <div class="col">
+                <div class="card bg-dark text-light">
+                    <img src="images/Viktor.jpg" class="card-img-top" alt="Viktor">
+                    <div class="card-body">
+                        <h5 class="card-title">Viktor</h5>
+                        <p class="card-text">Personagem: Viktor - Um jovem prodígio com um passado trágico, buscando poder e aceitação em Piltover.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card bg-dark text-light">
+                    <img src="images/Jinx.jpg" class="card-img-top" alt="Jinx">
+                    <div class="card-body">
+                        <h5 class="card-title">Jinx</h5>
+                        <p class="card-text">Personagem: Jinx - Uma criminosa caótica que adora causar confusão e destruição.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card bg-dark text-light">
+                    <img src="images/Vi.jpg" class="card-img-top" alt="Vi">
+                    <div class="card-body">
+                        <h5 class="card-title">Vi</h5>
+                        <p class="card-text">Personagem: Vi - Uma lutadora destemida que busca justiça e não hesita em usar a força para isso.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-center py-4">
+        <p class="text-light">&copy; 2024 Cine+Plus. Todos os direitos reservados.</p>
+    </footer>
+</body>
+
+</html>

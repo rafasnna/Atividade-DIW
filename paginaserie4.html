@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O Pinguim</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            background-color: #121212;
+            color: #ffffff;
+        }
+
+        .navbar {
+            background-color: #000000;
+        }
+
+        .card {
+            background-color: #1c1c1c;
+        }
+
+        .nav-link {
+            color: #ffffff;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .nav-link:hover {
+            color: #ff3e3e;
+        }
+
+        .navbar-brand {
+            font-size: 24px;
+            font-weight: bold;
+            color: #ffffff;
+        }
+
+        .navbar-brand:hover {
+            color: #ff3e3e;
+        }
+
+        .video-container {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark shadow-sm">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">Cine+Plus</a>
+            <div class="collapse navbar-collapse justify-content-end">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Página Inicial</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="explorer.html">Explorar</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container my-4">
+        <h2 class="text-center" id="serie-title">O Pinguim</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <img src="images/recent2.jpg" id="serie-image" class="img-fluid" alt="Imagem da Série">
+            </div>
+            <div class="col-md-6">
+                <h4>Sinopse</h4>
+                <p id="serie-sinopse">A série "O Pinguim" explora a vida de um dos vilões mais icônicos do universo de Gotham, enquanto ele tenta se estabelecer como o novo líder do submundo criminal da cidade.</p>
+                <p id="serie-ano">Ano de Lançamento: <span>2024</span></p>
+                <p id="serie-genero">Gênero: <span>Crime, Drama</span></p>
+                <p id="serie-aprovacao">Aprovação: <span>8.8</span></p>
+
+                <div class="video-container">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/5N_H1EWq718" 
+                            title="YouTube video player" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                    </iframe>
+
+                </div>
+            </div>
+        </div>
+
+        <h4 class="mt-4">Temporadas</h4>
+        <select id="season-select" class="form-select" aria-label="Selecione uma temporada">
+            <option value="">Selecione uma temporada</option>
+            <option value="1">Temporada 1 (10 episódios)</option>
+        </select>
+
+        <h4 class="mt-4">Elenco</h4>
+        <div id="elenco" class="row row-cols-1 row-cols-md-2 g-4">
+            <div class="col">
+                <div class="card bg-dark text-light">
+                    <img src="images/Pinguim.jpg" class="card-img-top" alt="Ator 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Colin Farrell</h5>
+                        <p class="card-text">Personagem: Pinguim</p>
+                    </div>
+                </div>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-center py-4">
+        <p class="text-light">&copy; 2024 Cine+Plus. Todos os direitos reservados.</p>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,105 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Ruttan+Elegant&display=swap');
+
+body {
+    background-color: #300000; /* Fundo vermelho escuro */
+    color: #ffffff; /* Texto branco */
+    font-family: 'Ruttan Elegant', sans-serif; /* Fonte Ruttan Elegant */
+    text-align: left; /* Alinha o texto à esquerda */
+}
+p {
+    color: #ffffff; /* Cor do texto em branco */
+}
+h5 {
+     text-align: left; /* Alinhamento à esquerda */
+    color: #ffffff ;
+}
+
+.navbar {
+    background-color: #000000; /* Define a cor do cabeçalho como preta */
+}
+
+
+.nav-link {
+    color: #ffffff; /* Cor dos links */
+    transition: color 0.3s; /* Transição suave */
+}
+
+.nav-link:hover {
+    color: #ff4757; /* Cor ao passar o mouse */
+}
+
+.card {
+    border: none; /* Remove a borda padrão do cartão */
+    background-color: #2b2b2b; /* Fundo do cartão */
+    transition: transform 0.3s; /* Transição suave para hover */
+}
+
+.card:hover {
+    transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
+}
+
+.card-title {
+    font-size: 1.2rem; /* Tamanho da fonte do título */
+}
+
+.card-text {
+    font-size: 0.9rem; /* Tamanho da fonte do texto */
+}
+
+footer {
+    background-color: black; /* Rodapé preto */
+}
+
+footer p {
+    color: #cccccc; /* Cor do texto do rodapé */
+}
+
+/* Estilos Responsivos */
+@media (max-width: 768px) {
+    .card-title {
+        font-size: 1rem; /* Tamanho do título em telas menores */
+    }
+
+    .card-text {
+        font-size: 0.8rem; /* Tamanho do texto em telas menores */
+    }
+}
+
+/* Estilo dos ícones de redes sociais */
+.social-icons {
+    margin-top: 10px;
+}
+
+.social-icon {
+    margin: 0 10px; /* Espaço entre os ícones */
+    color: #ffffff; /* Cor dos ícones */
+    text-decoration: none; /* Remove o sublinhado do link */
+}
+
+.social-icon:hover {
+    color: #ffd700; /* Cor ao passar o mouse */
+}
+
+/* Alinhamento dos títulos das seções */
+.section-title {
+    text-align: left; /* Alinha os títulos à esquerda */
+    font-family: 'Ruttan Elegant', sans-serif; /* Fonte dos títulos */
+    position: relative;
+    color: #ffffff; /* Garante que o título seja branco */
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    margin-top: 5px;
+}
