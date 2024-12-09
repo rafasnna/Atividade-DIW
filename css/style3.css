@@ -1,0 +1,236 @@
+#series-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+#video-container {
+    margin-top: 20px; /* Ajuste para dar um espaço entre o pôster e o trailer */
+    width: 100%;
+    max-width: 700px; /* Tamanho máximo do trailer */
+    height: 400px; /* Altura do trailer */
+}
+
+#series-poster {
+    width: 100%;
+    max-width: 300px; /* Limita o tamanho do pôster */
+    margin-bottom: 20px; /* Espaço abaixo do pôster */
+}
+
+
+.btn-custom {
+    background-color: #7c0505; /* Cor de fundo amarela */
+    color: #d29300; /* Cor do texto branca */
+    border-radius: 16px; /* Bordas arredondadas */
+    border-color: #f2b80d;
+    padding: 10px 20px; /* Espaçamento interno */
+    font-size: 10px; /* Tamanho da fonte */
+    font-weight: bold; /* Deixar a fonte em negrito */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Efeito de transição */
+}
+
+.btn-custom:hover {
+    background-color: #510505; /* Cor de fundo ao passar o mouse */
+    color: #cccccc;
+    border-color: #d29300;
+    transform: scale(1.0); /* Efeito de zoom ao passar o mouse */
+}
+
+.btn-custom:focus {
+    outline: none; /* Remover contorno ao focar no botão */
+    box-shadow: 0 0 10px rgba(242, 184, 13, 0.8); /* Sombra ao focar */
+}
+
+.navbar.navbar-dark.bg-dark {
+    background-color: #7c0505 !important;
+}
+
+.navbar.navbar-dark .navbar-brand,
+.navbar.navbar-dark .navbar-nav .nav-link {
+    color: #ffffff !important;
+}
+
+.navbar.navbar-dark .navbar-nav .nav-link:hover {
+    color: #f2b80d !important;
+}
+
+.navbar-brand {
+    color: #fff;
+    text-shadow: 0 0 10px #ffcc00, 0 0 20px #ffcc00, 0 0 30px #ffcc00;
+    transition: text-shadow 0.3s ease-in-out;
+}
+
+.navbar-brand:hover {
+    text-shadow: 0 0 15px #ffcc00, 0 0 30px #ffcc00, 0 0 50px #ffcc00;
+}
+
+.navbar .nav-link {
+    color: #fff;
+    transition: color 0.3s, text-shadow 0.3s;
+}
+
+.navbar .nav-link:hover {
+    color: #f2b80d;
+    text-shadow: 0 0 5px #f2b80d, 0 0 10px #f2b80d;
+}
+
+body {
+    background-color: #300000;
+    color: #0c0000;
+    font-family: 'Ruttan Elegant', sans-serif;
+}
+
+/* Container principal */
+.container {
+    margin-top: 50px;
+    flex: 1; /* Garante que o conteúdo ocupe o restante da tela */
+}
+
+/* Detalhes da Série */
+#series-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+#series-details img {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+#series-details h2 {
+    margin-top: 20px;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+#series-details p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #ddd;
+}
+
+/* Temporadas */
+#seasons-section {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.seasons-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.season-card {
+    background-color: #1f1f1f;
+    padding: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 150px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    transition: all 0.3s ease;
+}
+
+.season-card:hover {
+    background-color: #ff4500;
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+}
+
+.season-card h5 {
+    margin: 10px 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+.season-card p {
+    font-size: 1rem;
+    color: #bbb;
+}
+
+/* Episódios */
+#episodes-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.episode-card {
+    background-color: #333;
+    width: 200px;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    transition: all 0.3s ease;
+}
+
+.episode-card img {
+    width: 100%;
+    border-radius: 8px;
+    height: 120px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.episode-card h5 {
+    margin-top: 10px;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.episode-card p {
+    font-size: 0.9rem;
+    color: #bbb;
+    margin-top: 5px;
+}
+
+.episode-card:hover {
+    background-color: #ff4500;
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+}
+
+/* Footer */
+footer {
+    background-color: #1a1a1a;
+    padding: 20px 0;
+    color: #fff;
+    text-align: center;
+    margin-top: 40px; /* Garantindo que o footer não sobreponha conteúdo */
+}
+
+footer p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .seasons-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .season-card {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .episode-card {
+        width: 100%;
+        max-width: 250px;
+    }
+}

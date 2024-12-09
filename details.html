@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cine+</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="icon" href="images/web.png" sizes="16x16" type="image/png">
+        <link rel="stylesheet" href="/css/style3.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <style>
+            .carousel-inner {
+                transition: none !important;
+            }
+
+            .navbar .container-fluid {
+                display: flex;
+                align-items: center;
+            }
+
+            .navbar-brand {
+                margin-right: auto; 
+            }
+
+            .navbar-brand img {
+                max-width: 120px;
+                height: auto;
+            }
+
+            /* Estilos para as seções de Temporadas e Elenco */
+            #seasons-section h3, #cast-section h3 {
+                color: #f8f9fa;
+                text-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+            }
+
+            /* Estilo para o fundo de vídeo */
+            #video-container {
+                position: relative;
+                width: 100%;
+                height: 400px;
+                background-color: black;
+                overflow: hidden;
+                opacity: 0.6; /* Torna o vídeo um pouco opaco */
+            }
+
+            #video-container iframe, #video-container video {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            #details-content {
+                position: relative;
+                z-index: 2; /* Garante que o conteúdo fique sobre o vídeo */
+                color: #fff;
+            }
+
+            /* Estilo para o pôster da série */
+            #series-poster {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                z-index: 1; /* Pôster fica abaixo do conteúdo */
+            }
+
+            /* Estilos para o elenco */
+            #cast-container {
+                display: flex;
+                gap: 20px;
+                overflow-x: auto;
+                margin-top: 20px;
+            }
+
+            .cast-member {
+                width: 18rem;
+                text-align: center;
+            }
+
+            .cast-member img {
+                width: 100%;
+                height: auto;
+            }
+        </style>
+    </head>
+    <body>
+        <nav class="navbar navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html">
+                    <img src="images/logo.png" alt="Logo">
+                </a>
+                <a href="explorer.html" class="btn btn-light btn-custom">Explorar</a>
+            </div>
+        </nav>
+
+        <div class="container my-5">
+            <section id="series-details">
+                <div id="details-content">
+                    <!-- Video da série -->
+                    <div id="video-container">
+                        <!-- O trailer será inserido aqui dinamicamente via JS -->
+                    </div>
+
+                    <!-- Pôster da série -->
+                    <img id="series-poster" src="" alt="Poster da Série" class="img-fluid">
+
+                    <h2 id="series-title" style="color: #fff; text-shadow: 0 0 15px rgba(255, 255, 255, 0.7);"></h2>
+                    <p id="series-description" style="color: #ddd;"></p>
+                    <p><strong>Nota:</strong> <span id="series-rating"></span></p>
+                    <p><strong>Gênero:</strong> <span id="series-genre"></span></p>
+
+                    <div id="seasons-section">
+                        <h3>Temporadas</h3>
+                        <div class="accordion" id="seasons-container"></div>
+                    </div>
+
+                    <div id="cast-section">
+                        <h3>Elenco</h3>
+                        <div id="cast-container"></div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <footer class="bg-dark text-center text-light py-3">
+            <p>&copy; 2024 Cine+Plus. Todos os direitos reservados.</p>
+        </footer>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="/js/script3.js"></script>
+    </body>
+</html>

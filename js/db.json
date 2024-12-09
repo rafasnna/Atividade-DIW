@@ -1,0 +1,39 @@
+{
+  "series": [
+    {
+      "id": 1,
+      "name": "Breaking Bad",
+      "poster_path": "/path/to/poster.jpg",
+      "backdrop_path": "/path/to/backdrop.jpg",
+      "overview": "A story about a chemistry teacher turned drug dealer.",
+      "first_air_date": "2008-01-20",
+      "networks": [
+        { "name": "AMC" }
+      ],
+      "genres": [
+        { "name": "Drama" },
+        { "name": "Crime" }
+      ],
+      "origin_country": ["US"],
+      "original_language": "en"
+    },
+    {
+      "id": 2,
+      "name": "Stranger Things",
+      "poster_path": "/path/to/strangerthings.jpg",
+      "backdrop_path": "/path/to/strangerthingsbackdrop.jpg",
+      "overview": "A group of kids uncover a secret government experiment.",
+      "first_air_date": "2016-07-15",
+      "networks": [
+        { "name": "Netflix" }
+      ],
+      "genres": [
+        { "name": "Sci-Fi" },
+        { "name": "Horror" }
+      ],
+      "origin_country": ["US"],
+      "original_language": "en"
+    }
+  ],
+  "favorites": []
+}
